@@ -53,7 +53,7 @@
 
 		function call() {
 			var person_to_call = document.getElementById('callings').value;
-			console.log('WE IS CALLINNNN BRO ' + person_to_call);
+			console.log('calling now ' + person_to_call);
 			var peer = new Peer();
 			getUserMedia({
 				video: false,
@@ -81,7 +81,7 @@
 					video: false,
 					audio: true
 				}, function (stream) {
-					console.log("WE IS GETTIN CALLEDDDD");
+					console.log("we getting a call");
 					call.answer(stream); // Answer the call with an A/V stream.
 					call.on('stream', function (remoteStream) {
 						console.log(remoteStream);
